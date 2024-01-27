@@ -1,0 +1,14 @@
+version: "3"
+services:
+  redis-server:
+    image: "redis"
+  node-server:
+    build: .
+    ports:
+      - "8000:4000"
+    restart: "always"
+# In this file we have two services : redis-server and node-server
+# In redis-server, we are going to use predefined image "redis"
+# In node-server, we are going to use the Dockerfile to build the image from there.
+# Both services have network connection (they can see each other)
+# ports: to port local port 8000 to a port 4000 inside the containers
