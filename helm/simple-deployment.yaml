@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-node-server-deployment
+  labels:
+    app: simple-node-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-node-server
+  template:
+    metadata:
+      labels:
+        app: simple-node-server
+    spec:
+      containers:
+        - name: node-server
+          image: "markamgad4/simple-node-server:latest"
+          ports:
+            - containerPort: 3000

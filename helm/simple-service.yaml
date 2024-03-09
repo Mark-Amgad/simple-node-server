@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-node-service
+spec:
+  type: NodePort
+  selector:
+    # pods labels, get it from template in the deployment file
+    app: simple-node-server
+  ports:
+    - port: 3100
+      targetPort: 3000
+      nodePort: 30001
