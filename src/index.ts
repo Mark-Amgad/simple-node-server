@@ -17,8 +17,12 @@ app.use(bodyParser.json());
 app.get("/", (req: Request, res: Response) => {
   const hostAddress = os.hostname();
   res.send({
-    message: `Hello from nodejs server, that is running on ${hostAddress}`,
+    message: `Hello from nodejs server version 2, that is running on ${hostAddress}`,
   });
+});
+
+app.get("/mark", (req: Request, res: Response) => {
+  res.send("mark is here");
 });
 
 app.listen(port, () => {

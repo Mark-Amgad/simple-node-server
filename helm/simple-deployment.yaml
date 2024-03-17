@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: node-server
-          image: "markamgad4/simple-node-server:1.0.0"
+          image: "markamgad4/simple-node-server:1.0.1"
           ports:
             - containerPort: 3000
