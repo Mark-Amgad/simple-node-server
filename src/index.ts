@@ -5,6 +5,8 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import os from "os";
 
+// comment
+// comment 2
 dotenv.config();
 
 const port = process.env.PORT || 3000;
