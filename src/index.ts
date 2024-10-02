@@ -8,6 +8,7 @@ import os from "os";
 dotenv.config();
 
 // comment 2
+// comment 1
 const port = process.env.PORT || 3000;
 
 const app = express();
